@@ -1,0 +1,11 @@
+<launch deprecated="Please use 'upload.lauch' instead.">
+    <arg name="robot" default="full_v1"/>
+    <arg name="foot_collision" default="default"/>
+    <arg name="enable_crane" default="false"/>
+
+    <include file="$(find talos_data)/robots/upload.launch">
+        <arg name="robot" value="$(arg robot)"/>
+        <arg name="foot_collision" value="$(arg foot_collision)"/>
+        <arg name="enable_crane" value="$(arg enable_crane)"/>
+    </include>
+</launch>

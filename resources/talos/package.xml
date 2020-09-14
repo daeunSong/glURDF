@@ -1,0 +1,11 @@
+<package>
+  <name>talos-rbprm</name>
+  <version>0.1.0</version>
+  <description>
+    Info Database for using rbprm with talos.
+  </description>
+  <author>Steve Tonneau</author>
+  <maintainer email="hpp@laas.fr">Steve Tonneau</maintainer>
+  <license>LGPL v2</license>
+  <build_depend>hpp-rbprm</build_depend>
+</package>

@@ -183,7 +183,7 @@ int main(int argc, char** argv)
         return -1;
     }
     
-    scene_file_path += string(argv[1])+".stl";
+    scene_file_path += string(argv[1])+".stl"; //"playground.stl";
     config_file_path += string(argv[1]);
     
     // urdf: read urdf file
@@ -363,7 +363,8 @@ int main(int argc, char** argv)
 
         // render
         // ------
-        glClearColor(0.15f, 0.15f, 0.15f, 1.0f);
+        glClearColor(1.0f, 1.0f, 1.0f, 1.0f);    // background color
+        // glClearColor(0.15f, 0.15f, 0.15f, 1.0f);    // background color
         //glClearColor(0.5f,0.8f,0.9f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         

@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<robot name="talos_lleg_rom" xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller" xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface" xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <link name="torso_2_link">
+    <inertial>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.04551 -0.00053 0.16386"/>
+      <mass value="17.55011"/>
+      <inertia ixx="0.37376900000" ixy="0.00063900000" ixz="0.01219600000" iyy="0.24790200000" iyz="0.00000700000" izz="0.28140400000"/>
+    </inertial>
+  </link>
+  <!--************************-->
+  <!--        TORSO_1  (PAN)  -->
+  <!--************************-->
+  <link name="torso_1_link">
+    <inertial>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="0.00013 -0.00001 -0.01306"/>
+      <mass value="3.02433"/>
+      <inertia ixx="0.00759400000" ixy="0.00000100000" ixz="-0.00004800000" iyy="0.00429200000" iyz="-0.00000100000" izz="0.00749700000"/>
+    </inertial>
+  </link>
+  <joint name="torso_1_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="torso_1_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0722"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="78.0" lower="-1.25663706144" upper="1.25663706144" velocity="5.4"/>
+  </joint>
+  <!--************************-->
+  <!--        BASE_LINK       -->
+  <!--************************-->
+  <link name="base_link">
+    <inertial>
+      <origin rpy="0.00000 0.00000 0.00000" xyz="-0.08222 0.00838 -0.07261"/>
+      <mass value="13.53810"/>
+      <inertia ixx="0.06989000000" ixy="-0.00011700000" ixz="0.00023000000" iyy="0.03998200000" iyz="-0.00132500000" izz="0.08234500000"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://talos-rbprm/meshes/talos_lleg_rom_reduced.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="LightGrey"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://talos-rbprm/meshes/talos_lleg_rom_reduced.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="torso_2_joint" type="revolute">
+    <parent link="torso_1_link"/>
+    <child link="torso_2_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="78.0" lower="-0.226892802759" upper="0.733038285838" velocity="5.4"/>
+  </joint>
+  <!-- define global properties -->
+  <!-- <xacro:property name="M_PI" value="3.1415926535897931" /> -->
+  <!-- Materials for visualization -->
+  <material name="Blue">
+    <color rgba="0.0 0.0 0.8 1.0"/>
+  </material>
+  <material name="Green">
+    <color rgba="0.0 0.8 0.0 1.0"/>
+  </material>
+  <material name="Grey">
+    <color rgba="0.7 0.7 0.7 1.0"/>
+  </material>
+  <material name="LightGrey">
+    <color rgba="0.9 0.9 0.9 1.0"/>
+  </material>
+  <material name="DarkGrey">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+  </material>
+  <material name="Red">
+    <color rgba="0.8 0.0 0.0 1.0"/>
+  </material>
+  <material name="White">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+  <material name="Orange">
+    <color rgba="1.0 0.5 0.0 1.0"/>
+  </material>
+</robot>

@@ -1,0 +1,22 @@
+prefix=/usr/local
+exec_prefix=/usr/local
+libdir=/usr/local/lib
+bindir=/usr/local/bin
+pkglibdir=/usr/local/lib/talos_data
+includedir=/usr/local/include
+datarootdir=/usr/local/share
+pkgdatarootdir=/usr/local/share
+docdir=/usr/local/share/doc/talos_data
+doxygendocdir=/usr/local/share/doc/talos_data/doxygen-html
+
+Name: talos_data
+Description: Talos urdf model, srdf model and other data
+URL: https://gepgitlab.laas.fr/pyrene-dev/talos_data
+Version: 1.2.2
+Requires: 
+Conflicts: 
+Libs: -L${libdir} 
+Libs.private: 
+Cflags:  -I${includedir}
+
+

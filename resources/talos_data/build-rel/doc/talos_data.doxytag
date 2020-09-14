@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile>
+  <compound kind="file">
+    <name>SpringPlugin.cc</name>
+    <path>/home/daeunsong/devel/hpp/src/talos-data/src/</path>
+    <filename>SpringPlugin_8cc</filename>
+    <includes id="SpringPlugin_8hh" name="SpringPlugin.hh" local="yes" imported="no">SpringPlugin.hh</includes>
+  </compound>
+  <compound kind="file">
+    <name>SpringPlugin.hh</name>
+    <path>/home/daeunsong/devel/hpp/src/talos-data/src/</path>
+    <filename>SpringPlugin_8hh</filename>
+    <class kind="class">gazebo::SpringPlugin</class>
+    <namespace>gazebo</namespace>
+  </compound>
+  <compound kind="class">
+    <name>gazebo::SpringPlugin</name>
+    <filename>classgazebo_1_1SpringPlugin.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>SpringPlugin</name>
+      <anchorfile>classgazebo_1_1SpringPlugin.html</anchorfile>
+      <anchor>af23d220506bdb97b0d3d29ecff727889</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Load</name>
+      <anchorfile>classgazebo_1_1SpringPlugin.html</anchorfile>
+      <anchor>abb8198ff1a0c9a683663e82fe6f3205a</anchor>
+      <arglist>(physics::ModelPtr _model, sdf::ElementPtr _sdf)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Init</name>
+      <anchorfile>classgazebo_1_1SpringPlugin.html</anchorfile>
+      <anchor>ae027befc55a54c144b3eb17d59d19bfa</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>gazebo</name>
+    <filename>namespacegazebo.html</filename>
+    <class kind="class">gazebo::SpringPlugin</class>
+  </compound>
+</tagfile>

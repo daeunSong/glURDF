@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <!-- arg could be v1 (Pyerene) or v2 (IJS/PAL) -->
+  <arg name="robot" default="full_v2"/>
+  <arg name="foot_collision" default="default"/> <!-- default / thinbox / tallbox -->
+  <arg name="enable_crane" default="false"/> <!-- crude adhoc approximation of the crane for collision avoidance -->
+  <arg name="parameter_name" default="robot_description"/>
+
+  <!-- TODO AS: zeros should not be the default (self-colliding), but it is currently required for tests -->
+  <arg name="default_configuration_type" default="zeros"/>
+  <arg name="enable_leg_passive" default="true"/>
+  <arg name="enable_fixed_robot" default="true"/>
+
+  <!-- Robot description -->
+  <param
+      name="$(arg parameter_name)"
+      command=" $(find xacro)/xacro --inorder
+                '$(find talos_data)/robots/talos_$(arg robot).urdf.xacro'
+                foot_collision:=$(arg foot_collision)
+                enable_crane:=$(arg enable_crane)
+                enable_leg_passive:=$(arg enable_leg_passive)
+                enable_fixed_robot:=$(arg enable_fixed_robot)"
+      />
+
+  <rosparam command="load" file="$(find talos_data)/config/default_configuration_$(arg default_configuration_type).yaml" />
+  <rosparam command="load" file="$(find talos_data)/config/collision_parameters.yaml" />
+</launch>

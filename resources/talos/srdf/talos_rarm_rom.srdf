@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name="talos_rarm_rom">
+  <handle name="handle">
+    <position> 0 0 0 1 0 0 0 </position>
+    <link name="base_link"/>
+  </handle>
+  <handle name="handle2">
+    <position> 0 0 0
+      0 0 0.7071067811865476 0.7071067811865476 </position>
+    <link name="base_link"/>
+  </handle>
+  <contact name="box_surface">
+    <link name="base_link"/>
+    <point>-0.025 -0.025 -0.025   -0.025 0.025 -0.025   -0.025 -0.025 0.025   -0.025 0.025 0.025
+           +0.025 -0.025 -0.025   +0.025 0.025 -0.025   +0.025 -0.025 0.025   +0.025 0.025 0.025 </point>
+    <triangle> 0 2 1 4 5 6</triangle>
+  </contact>
+</robot>
